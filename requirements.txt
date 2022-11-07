@@ -1,0 +1,9 @@
+flask
+black
+flask-restful
+flask-sqlalchemy
+marshmallow
+flask-jwt-extended
+python-dotenv
+torch
+torchvision
