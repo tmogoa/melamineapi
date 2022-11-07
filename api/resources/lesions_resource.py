@@ -5,7 +5,7 @@ from PIL import Image
 from flask import request, current_app, jsonify
 from flask_restful import Resource, abort, reqparse
 from werkzeug import datastructures
-
+from sqlalchemy.orm.exc import NoResultFound
 from api.db.database import db
 from api.models.lesion import Lesion
 from api.schemas.lesion_schema import LesionSchema
@@ -47,13 +47,26 @@ class LesionsResource(Resource):
         return malignancy.item(), conf.item()
 
     @jwt_required()
-    def get(self):
-        pass
-        # model = self.load_model()
-        # if model:
-        #     return jsonify({"msg": "model loaded"})
-        # else:
-        #     abort(500, message="Error occurred!")
+    def get(self, id=None, lesion_id=None):
+        if lesion_id:
+            lesion = Lesion.query.filter_by(
+                lesion_id=lesion_id
+            ).first()
+            lesion_json = LesionSchema().dump(lesion)
+
+            if not lesion_json:
+                abort(404, message="Lesion not found.")
+            return lesion_json
+        elif id:
+            lesions = Lesion.query.filter_by(
+                user_id=id
+            ).all()
+
+            lesions_json = [LesionSchema().dump(lesion) for lesion in lesions]
+            if not lesions_json:
+                abort(404, message="No result")
+            return lesions_json
+            
 
     @jwt_required()
     def post(self, id=None):
@@ -95,9 +108,16 @@ class LesionsResource(Resource):
             abort(400, message="user_id is required.")
 
     @jwt_required()
-    def predict():
-        pass
-
-    @jwt_required()
-    def delete(self):
-        pass
+    def delete(self, id=None):
+        if id:
+            lesion = Lesion.query.filter_by(lesion_id=id).first()
+            if lesion:
+                try:
+                    db.session.delete(lesion)
+                    db.session.commit()
+                except Exception as e:
+                    abort(500, message=f"Failed to delete entry.\n{e}")
+                else:
+                    return {"message": "Deleted successfully."}, 201
+            else:
+                abort(400, message="Nothing to delete.")

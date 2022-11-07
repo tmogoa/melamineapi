@@ -59,7 +59,12 @@ def create_app():
     api.add_resource(RegisterResource, f"{USERS_ENDPOINT}/signup")
     api.add_resource(LoginResource, f"{USERS_ENDPOINT}/login")
     api.add_resource(LogoutResource, f"{USERS_ENDPOINT}/logout")
-    api.add_resource(LesionsResource, f"{LESIONS_ENDPOINT}", f"{LESIONS_ENDPOINT}/<id>")
+    api.add_resource(
+        LesionsResource, 
+        f"{LESIONS_ENDPOINT}", 
+        f"{LESIONS_ENDPOINT}/<id>", 
+        f"{LESIONS_ENDPOINT}/<id>/<lesion_id>"
+    )
 
     # Callback function to check if a JWT exists in the database blocklist
     @jwt.token_in_blocklist_loader

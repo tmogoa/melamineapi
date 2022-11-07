@@ -1096,3 +1096,148 @@ werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server e
 11-07 11:55 werkzeug     WARNING   * Debugger is active!
 11-07 11:55 werkzeug     INFO      * Debugger PIN: 863-880-111
 11-07 11:55 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 11:55:58] "POST /api/lesions/1 HTTP/1.1" 200 -
+11-07 14:07 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 14:07 werkzeug     INFO      * Restarting with stat
+11-07 14:07 werkzeug     WARNING   * Debugger is active!
+11-07 14:07 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 14:07 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:07:31] "GET /api/lesions/1 HTTP/1.1" 200 -
+11-07 14:07 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:07:39] "GET /api/lesions/10 HTTP/1.1" 200 -
+11-07 14:07 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:07:43] "GET /api/lesions/15 HTTP/1.1" 200 -
+11-07 14:07 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:07:47] "GET /api/lesions/17 HTTP/1.1" 200 -
+11-07 14:07 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:07:52] "GET /api/lesions/19 HTTP/1.1" 200 -
+11-07 14:07 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:07:58] "GET /api/lesions/25 HTTP/1.1" 200 -
+11-07 14:11 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 14:11 werkzeug     INFO      * Restarting with stat
+11-07 14:11 werkzeug     WARNING   * Debugger is active!
+11-07 14:11 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 14:11 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:11:47] "[35m[1mGET /api/lesions/25 HTTP/1.1[0m" 500 -
+11-07 14:12 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 14:12 werkzeug     INFO      * Restarting with stat
+11-07 14:12 werkzeug     WARNING   * Debugger is active!
+11-07 14:12 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 14:12 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:12:16] "[33mGET /api/lesions/25 HTTP/1.1[0m" 404 -
+11-07 14:13 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 14:13 werkzeug     INFO      * Restarting with stat
+11-07 14:13 werkzeug     WARNING   * Debugger is active!
+11-07 14:13 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 14:13 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:13:08] "[33mGET /api/lesions/24 HTTP/1.1[0m" 404 -
+11-07 14:13 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:13:13] "[33mGET /api/lesions/23 HTTP/1.1[0m" 404 -
+11-07 14:13 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:13:17] "[33mGET /api/lesions/22 HTTP/1.1[0m" 404 -
+11-07 14:13 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:13:18] "[33mGET /api/lesions/22 HTTP/1.1[0m" 404 -
+11-07 14:13 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 14:13:22] "GET /api/lesions/21 HTTP/1.1" 200 -
+11-07 14:15 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/api.py', reloading
+11-07 14:15 werkzeug     INFO      * Restarting with stat
+11-07 14:15 werkzeug     WARNING   * Debugger is active!
+11-07 14:15 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 15:04 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 15:04 werkzeug     INFO      * Restarting with stat
+11-07 15:04 werkzeug     WARNING   * Debugger is active!
+11-07 15:04 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 15:04 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 15:04:46] "[35m[1mGET /api/lesions/21 HTTP/1.1[0m" 500 -
+11-07 16:56 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 16:56 werkzeug     INFO      * Restarting with stat
+11-07 16:56 werkzeug     WARNING   * Debugger is active!
+11-07 16:56 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 16:57 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 16:57:01] "[35m[1mGET /api/lesions/21 HTTP/1.1[0m" 500 -
+11-07 16:58 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 16:58 werkzeug     INFO      * Restarting with stat
+11-07 16:58 werkzeug     WARNING   * Debugger is active!
+11-07 16:58 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 16:58 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 16:58:06] "[35m[1mGET /api/lesions/21 HTTP/1.1[0m" 500 -
+11-07 17:01 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:01:18] "[35m[1mGET /api/lesions/21 HTTP/1.1[0m" 500 -
+11-07 17:01 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:01:46] "GET /api/lesions/1/21 HTTP/1.1" 200 -
+11-07 17:01 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:01:53] "[35m[1mGET /api/lesions/1 HTTP/1.1[0m" 500 -
+11-07 17:02 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 17:02 werkzeug     INFO      * Restarting with stat
+11-07 17:02 werkzeug     WARNING   * Debugger is active!
+11-07 17:02 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 17:02 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:02:52] "[35m[1mGET /api/lesions/1 HTTP/1.1[0m" 500 -
+11-07 17:03 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 17:03 werkzeug     INFO      * Restarting with stat
+11-07 17:03 werkzeug     WARNING   * Debugger is active!
+11-07 17:03 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 17:03 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 17:03 werkzeug     INFO      * Restarting with stat
+11-07 17:03 werkzeug     WARNING   * Debugger is active!
+11-07 17:03 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 17:03 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:03:12] "GET /api/lesions/1 HTTP/1.1" 200 -
+11-07 17:03 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:03:22] "GET /api/lesions/4 HTTP/1.1" 200 -
+11-07 17:03 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:03:27] "GET /api/lesions/4 HTTP/1.1" 200 -
+11-07 17:03 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:03:29] "GET /api/lesions/4/2 HTTP/1.1" 200 -
+11-07 17:04 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 17:04 werkzeug     INFO      * Restarting with stat
+11-07 17:04 werkzeug     WARNING   * Debugger is active!
+11-07 17:04 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 17:04 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:04:54] "GET /api/lesions/4/2 HTTP/1.1" 200 -
+11-07 17:04 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:04:57] "[33mGET /api/lesions/4/ HTTP/1.1[0m" 404 -
+11-07 17:05 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:05:02] "GET /api/lesions/4 HTTP/1.1" 200 -
+11-07 17:05 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 17:05 werkzeug     INFO      * Restarting with stat
+11-07 17:05 werkzeug     WARNING   * Debugger is active!
+11-07 17:05 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 17:05 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:05:55] "[33mGET /api/lesions/4 HTTP/1.1[0m" 404 -
+11-07 17:06 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:06:18] "GET /api/lesions/1 HTTP/1.1" 200 -
+11-07 17:07 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/api.py', reloading
+11-07 17:07 werkzeug     INFO      * Restarting with stat
+11-07 17:07 werkzeug     WARNING   * Debugger is active!
+11-07 17:07 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 17:12 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 17:12 werkzeug     INFO      * Restarting with stat
+11-07 17:12 werkzeug     WARNING   * Debugger is active!
+11-07 17:12 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 17:13 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:13:04] "[35m[1mDELETE /api/lesions/6 HTTP/1.1[0m" 500 -
+11-07 17:13 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 17:13 werkzeug     INFO      * Restarting with stat
+11-07 17:13 werkzeug     WARNING   * Debugger is active!
+11-07 17:13 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 17:13 api.api      ERROR    Exception on /api/lesions/6 [DELETE]
+Traceback (most recent call last):
+  File "/home/tony/flaskprojects/melamineapi/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2700, in delete
+    state = attributes.instance_state(instance)
+AttributeError: 'NoneType' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py", line 115, in delete
+    db.session.delete(lesion)
+  File "<string>", line 2, in delete
+  File "/home/tony/flaskprojects/melamineapi/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2702, in delete
+    util.raise_(
+  File "/home/tony/flaskprojects/melamineapi/venv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.NoneType' is not mapped
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tony/flaskprojects/melamineapi/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/tony/flaskprojects/melamineapi/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/tony/flaskprojects/melamineapi/venv/lib/python3.8/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/tony/flaskprojects/melamineapi/venv/lib/python3.8/site-packages/flask/views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "/home/tony/flaskprojects/melamineapi/venv/lib/python3.8/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/tony/flaskprojects/melamineapi/venv/lib/python3.8/site-packages/flask_jwt_extended/view_decorators.py", line 154, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py", line 118, in delete
+    abort(500, message=f"Failed to delete entry.\n{e}")
+  File "/home/tony/flaskprojects/melamineapi/venv/lib/python3.8/site-packages/flask_restful/__init__.py", line 31, in abort
+    original_flask_abort(http_status_code)
+  File "/home/tony/flaskprojects/melamineapi/venv/lib/python3.8/site-packages/flask/helpers.py", line 310, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "/home/tony/flaskprojects/melamineapi/venv/lib/python3.8/site-packages/werkzeug/exceptions.py", line 864, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+11-07 17:13 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:13:39] "[35m[1mDELETE /api/lesions/6 HTTP/1.1[0m" 500 -
+11-07 17:14 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:14:07] "GET /api/lesions/1 HTTP/1.1" 200 -
+11-07 17:15 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+11-07 17:15 werkzeug     INFO      * Restarting with stat
+11-07 17:15 werkzeug     WARNING   * Debugger is active!
+11-07 17:15 werkzeug     INFO      * Debugger PIN: 863-880-111
+11-07 17:15 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:15:02] "[31m[1mDELETE /api/lesions/6 HTTP/1.1[0m" 400 -
+11-07 17:15 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:15:18] "[35m[1mDELETE /api/lesions/20 HTTP/1.1[0m" 201 -
+11-07 17:15 werkzeug     INFO     127.0.0.1 - - [07/Nov/2022 17:15:21] "GET /api/lesions/1 HTTP/1.1" 200 -
