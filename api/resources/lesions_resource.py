@@ -82,7 +82,7 @@ class LesionsResource(Resource):
                     abort(400, message="Only PNG, JPG and GIF are permitted")
 
                 new_filename = str(uuid.uuid4())
-                filepath = f"{os.path.join(current_app.instance_path, f'uploads/{new_filename}{file_ext}')}"
+                filepath = f"{os.path.join(current_app.static_folder, f'uploads/{new_filename}{file_ext}')}"
                 image_file.save(filepath)
 
                 # img_bytes = open(file_path, "r").read()
@@ -118,6 +118,6 @@ class LesionsResource(Resource):
                 except Exception as e:
                     abort(500, message=f"Failed to delete entry.\n{e}")
                 else:
-                    return {"message": "Deleted successfully."}, 201
+                    return {"message": "DEL_SUCCESS"}, 201
             else:
                 abort(400, message="Nothing to delete.")

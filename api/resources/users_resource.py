@@ -26,19 +26,28 @@ class RegisterResource(Resource):
         user  = UserSchema().load(data)
 
         if not user.user_email:
-            error = "Email is required!"
+            error = "EMAIL_REQUIRED"
         if not user.user_password:
-            error = "Password is required!"
+            error = "PASSWORD_REQUIRED"
         
         if error is None:
             user.user_password = generate_password_hash(user.user_password)
+        else:
+            abort(403, message=f"{error}")
         try:
             db.session.add(user)
             db.session.commit()
         except IntegrityError as e:
-            abort(403, message=f"{e}")
+            abort(403, message=f"EMAIL_TAKEN")
         else:
-            return user.user_id, 201
+            user_json = UserSchema().dump(user)
+            token = create_access_token(identity=str(user.user_id))
+            response = jsonify({
+                'user_id': user_json["user_id"],
+                'user_email':  user_json["user_email"],
+                'token': token
+            })
+            return response
 
 class LoginResource(Resource):
     def post(self):
@@ -50,14 +59,15 @@ class LoginResource(Resource):
         a_user = User.query.filter_by(user_email=user.user_email).first()
         a_user_json = UserSchema().dump(a_user)
         if not a_user:
-            error = "Invalid credentials!"
+            error = "INVALID_CREDS"
         elif not check_password_hash(a_user.user_password, user.user_password):
-            error = "Invalid credentials!"
+            error = "INVALID_CREDS"
         
         if error is None:
             token = create_access_token(identity=str(a_user.user_id))
             response = jsonify({
-                'user': a_user_json,
+                'user_id': a_user_json["user_id"],
+                'user_email': a_user_json["user_email"],
                 'token': token
             })
             return response
@@ -71,9 +81,5 @@ class LogoutResource(Resource):
         now = datetime.now(timezone.utc)
         db.session.add(TokenBlocklist(jti=jti, created_at=now))
         db.session.commit()
-        return jsonify(msg="JWT revoked")
-        response = jsonify({
-            "msg": "Logout successful."
-        })
-        return response
+        return jsonify(message="JWT_REVOKED")
 

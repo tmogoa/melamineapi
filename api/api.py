@@ -3,10 +3,11 @@ import sys
 import os
 from datetime import timedelta
 
-from flask import Flask
+from flask import Flask, url_for
 from flask_restful import Api
 from dotenv import load_dotenv
 from flask_jwt_extended import JWTManager
+from flask_cors import CORS
 
 from api.db.database import db, init_db
 
@@ -39,8 +40,8 @@ def create_app():
     )
     ACCESS_EXPIRES = timedelta(hours=24)
     app.config["JWT_COOKIE_SECURE"] = False
-    app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
-    app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
+    app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+    app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.jpeg', '.png', '.gif']
     app.config["JWT_ACCESS_TOKEN_EXPIRES"] = ACCESS_EXPIRES
     # ensure the instance folder exists
     try:
@@ -56,6 +57,7 @@ def create_app():
 
     api = Api(app)
     jwt = JWTManager(app)
+    CORS(app, expose_headers='Authorization')
     api.add_resource(RegisterResource, f"{USERS_ENDPOINT}/signup")
     api.add_resource(LoginResource, f"{USERS_ENDPOINT}/login")
     api.add_resource(LogoutResource, f"{USERS_ENDPOINT}/logout")
@@ -72,5 +74,5 @@ def create_app():
         jti = jwt_payload["jti"]
         token = db.session.query(TokenBlocklist.id).filter_by(jti=jti).scalar()
         return token is not None
-    
+
     return app
