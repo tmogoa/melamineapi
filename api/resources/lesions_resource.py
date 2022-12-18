@@ -1,6 +1,9 @@
 import os, io, torch
 from torchvision import models
-import torchvision.transforms as transforms
+# import torchvision.transforms as transforms
+import albumentations as A
+from albumentations.pytorch import ToTensorV2
+import cv2
 from PIL import Image
 from flask import request, current_app, jsonify
 from flask_restful import Resource, abort, reqparse
@@ -18,33 +21,39 @@ class LesionsResource(Resource):
 
     def load_model(self):
         model = torch.load(
-            os.path.join(current_app.instance_path, 'ml/acc-82-resnet.pth'),
+            os.path.join(current_app.instance_path, 'ml/resnet34-best.pth'),
             map_location=torch.device('cpu')
         )
         model.eval()
         return model
 
     def transform_image(self, filepath):
-        my_transforms = transforms.Compose([
-            transforms.Resize(256),
-            transforms.CenterCrop(224),
-            transforms.ToTensor(),
-            transforms.Normalize(
-                [0.485, 0.456, 0.406],
-                [0.229, 0.224, 0.225]
-            )
-        ])
-        image = Image.open(filepath).convert('RGB')
-        return my_transforms(image).unsqueeze(0)
+        test_transform = A.Compose(
+            [
+                A.Resize(height=256, width=256),
+                A.CenterCrop(height=224, width=224, p=1),
+                A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
+                ToTensorV2(),
+            ]
+        )
 
+        image = cv2.imread(filepath)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image = test_transform(image=image)["image"]
+        # unsqueeze to add a batch dimension
+        image = image.unsqueeze(0)
+        return image
 
     def get_prediction(self, filepath):
-        tensor = self.transform_image(filepath=filepath)
+
         model = self.load_model()
+        model.eval()
+        tensor = self.transform_image(filepath)
         outputs = model.forward(tensor)
-        outputs = torch.sigmoid(outputs)
-        conf, malignancy = outputs.max(1)
-        return malignancy.item(), conf.item()
+        softmax = torch.nn.Softmax(dim=1)
+        outputs = softmax(outputs)
+        confidence, malignancy = outputs.max(1)
+        return malignancy.item(), confidence.item()
 
     @jwt_required()
     def get(self, id=None, lesion_id=None):
@@ -93,7 +102,7 @@ class LesionsResource(Resource):
                     "user_id": id,
                     "lesion_img_url": f"uploads/{new_filename}{file_ext}",
                     "lesion_malignancy": malignancy,
-                    "lesion_pred_conf": conf
+                    "lesion_pred_conf": f"{conf:.2f}"
                 })
 
                 try:

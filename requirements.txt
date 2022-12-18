@@ -7,3 +7,5 @@ flask-jwt-extended
 python-dotenv
 torch
 torchvision
+albumentations
+opencv-python

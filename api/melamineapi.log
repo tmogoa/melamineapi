@@ -1917,3 +1917,81 @@ werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server e
 11-14 12:49 werkzeug     INFO     10.51.14.91 - - [14/Nov/2022 12:49:31] "[33mGET /api/lesions/21 HTTP/1.1[0m" 404 -
 11-14 12:53 werkzeug     INFO     10.51.14.91 - - [14/Nov/2022 12:53:25] "[33mGET /api/lesions/21 HTTP/1.1[0m" 404 -
 11-14 12:53 werkzeug     INFO     10.51.14.91 - - [14/Nov/2022 12:53:30] "DELETE /api/users/logout HTTP/1.1" 200 -
+12-18 17:26 werkzeug     INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+12-18 17:26 werkzeug     INFO     [33mPress CTRL+C to quit[0m
+12-18 17:26 werkzeug     INFO      * Restarting with stat
+12-18 17:26 werkzeug     WARNING   * Debugger is active!
+12-18 17:26 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 17:28 werkzeug     INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.117:5000
+12-18 17:28 werkzeug     INFO     [33mPress CTRL+C to quit[0m
+12-18 17:28 werkzeug     INFO      * Restarting with stat
+12-18 17:28 werkzeug     WARNING   * Debugger is active!
+12-18 17:28 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 17:30 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 17:30:46] "[31m[1mPOST /api/lesions/1 HTTP/1.1[0m" 401 -
+12-18 17:30 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 17:30:57] "POST /api/users/login HTTP/1.1" 200 -
+12-18 17:31 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 17:31:01] "[31m[1mPOST /api/lesions/1 HTTP/1.1[0m" 401 -
+12-18 17:31 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 17:31:22] "[31m[1mPOST /api/lesions/1 HTTP/1.1[0m" 401 -
+12-18 17:31 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 17:31:51] "POST /api/lesions/1 HTTP/1.1" 200 -
+12-18 17:32 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+12-18 17:32 werkzeug     INFO      * Restarting with stat
+12-18 17:32 werkzeug     WARNING   * Debugger is active!
+12-18 17:32 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 17:32 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 17:32:54] "POST /api/lesions/1 HTTP/1.1" 200 -
+12-18 17:40 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+12-18 17:40 werkzeug     INFO      * Restarting with stat
+12-18 17:41 werkzeug     WARNING   * Debugger is active!
+12-18 17:41 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 17:41 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 17:41:43] "POST /api/lesions/1 HTTP/1.1" 200 -
+12-18 17:42 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+12-18 17:42 werkzeug     INFO      * Restarting with stat
+12-18 17:42 werkzeug     WARNING   * Debugger is active!
+12-18 17:42 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 17:42 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 17:42:52] "POST /api/lesions/1 HTTP/1.1" 200 -
+12-18 17:43 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+12-18 17:43 werkzeug     INFO      * Restarting with stat
+12-18 17:43 werkzeug     WARNING   * Debugger is active!
+12-18 17:43 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 17:43 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 17:43:14] "POST /api/lesions/1 HTTP/1.1" 200 -
+12-18 17:58 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+12-18 17:58 werkzeug     INFO      * Restarting with stat
+12-18 17:58 werkzeug     WARNING   * Debugger is active!
+12-18 17:58 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 17:58 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 17:58:14] "POST /api/lesions/1 HTTP/1.1" 200 -
+12-18 17:58 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+12-18 17:58 werkzeug     INFO      * Restarting with stat
+12-18 17:58 werkzeug     WARNING   * Debugger is active!
+12-18 17:58 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 17:59 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 17:59:12] "POST /api/lesions/1 HTTP/1.1" 200 -
+12-18 17:59 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+12-18 18:00 werkzeug     INFO      * Restarting with stat
+12-18 18:00 werkzeug     WARNING   * Debugger is active!
+12-18 18:00 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 18:00 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 18:00:05] "POST /api/lesions/1 HTTP/1.1" 200 -
+12-18 18:00 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+12-18 18:00 werkzeug     INFO      * Restarting with stat
+12-18 18:00 werkzeug     WARNING   * Debugger is active!
+12-18 18:00 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 18:00 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 18:00:46] "POST /api/lesions/1 HTTP/1.1" 200 -
+12-18 18:01 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+12-18 18:01 werkzeug     INFO      * Restarting with stat
+12-18 18:01 werkzeug     WARNING   * Debugger is active!
+12-18 18:01 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 18:01 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 18:01:17] "POST /api/lesions/1 HTTP/1.1" 200 -
+12-18 18:01 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+12-18 18:01 werkzeug     INFO      * Restarting with stat
+12-18 18:01 werkzeug     WARNING   * Debugger is active!
+12-18 18:01 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 18:04 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+12-18 18:04 werkzeug     INFO      * Restarting with stat
+12-18 18:04 werkzeug     WARNING   * Debugger is active!
+12-18 18:04 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 18:05 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 18:05:09] "POST /api/lesions/1 HTTP/1.1" 200 -
+12-18 18:05 werkzeug     INFO      * Detected change in '/home/tony/flaskprojects/melamineapi/api/resources/lesions_resource.py', reloading
+12-18 18:05 werkzeug     INFO      * Restarting with stat
+12-18 18:05 werkzeug     WARNING   * Debugger is active!
+12-18 18:05 werkzeug     INFO      * Debugger PIN: 116-409-804
+12-18 18:06 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 18:06:03] "POST /api/lesions/1 HTTP/1.1" 200 -
