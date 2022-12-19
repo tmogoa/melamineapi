@@ -1995,3 +1995,11 @@ werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server e
 12-18 18:05 werkzeug     WARNING   * Debugger is active!
 12-18 18:05 werkzeug     INFO      * Debugger PIN: 116-409-804
 12-18 18:06 werkzeug     INFO     127.0.0.1 - - [18/Dec/2022 18:06:03] "POST /api/lesions/1 HTTP/1.1" 200 -
+12-19 16:55 werkzeug     INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.155:5000
+12-19 16:55 werkzeug     INFO     [33mPress CTRL+C to quit[0m
+12-19 16:55 werkzeug     INFO      * Restarting with stat
+12-19 16:55 werkzeug     WARNING   * Debugger is active!
+12-19 16:55 werkzeug     INFO      * Debugger PIN: 116-409-804
