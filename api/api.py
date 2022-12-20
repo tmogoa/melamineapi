@@ -8,6 +8,7 @@ from flask_restful import Api
 from dotenv import load_dotenv
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 from api.db.database import db, init_db
 
@@ -43,6 +44,10 @@ def create_app():
     app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
     app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.jpeg', '.png', '.gif']
     app.config["JWT_ACCESS_TOKEN_EXPIRES"] = ACCESS_EXPIRES
+
+    app.wsgi_app = ProxyFix(
+        app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1
+    )
     # ensure the instance folder exists
     try:
         os.makedirs(app.instance_path)
